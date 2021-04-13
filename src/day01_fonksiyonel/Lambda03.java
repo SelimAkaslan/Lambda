@@ -8,6 +8,7 @@ public class Lambda03 {
 
     public static void main(String[] args) {
         System.out.print("Virgülle ayrılmış olarak sayıları giriniz:");
+
         Scanner scanner = new Scanner(System.in);
         String[] giriş = scanner.nextLine().split(",");
         Function<String, Integer> çevirici = x -> Integer.parseInt(x);
