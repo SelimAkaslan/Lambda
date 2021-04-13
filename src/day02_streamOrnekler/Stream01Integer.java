@@ -21,12 +21,17 @@ public class Stream01Integer {
         rakamlar.stream().filter(t-> t%2!=0).forEach(System.out ::println); //t-> System.out.println(t+ " ") bu sekilde de yazdirilir
         System.out.println("===================");
         rakamlar.stream().filter(t-> t%2==0).forEach(t-> System.out.println(t+" "));
-
+        System.out.println("===================");
         rakamlar.stream().filter(t-> t%2==0).forEach(Stream01Integer::yazdir);
-
+        System.out.println("===================");
+        rakamlar.stream().filter(Stream01Integer::tekMi).forEach(Stream01Integer::yazdir);
     }
     public static void yazdir(int x){
         System.out.print(x+" ");
+    }
+    public static boolean tekMi(int x){
+        return x%2!=0;
+
     }
 
 }
