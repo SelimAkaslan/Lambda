@@ -17,13 +17,14 @@ public class Stream01Integer {
         rakamlar.add(18);
         rakamlar.add(-200);
         rakamlar.add(7);
-
+        System.out.println("\n==========Tek Sayilar=========");
         rakamlar.stream().filter(t-> t%2!=0).forEach(System.out ::println); //t-> System.out.println(t+ " ") bu sekilde de yazdirilir
-        System.out.println("===================");
+        System.out.println("\n=========Cift Sayilar==========");
         rakamlar.stream().filter(t-> t%2==0).forEach(t-> System.out.println(t+" "));
-        System.out.println("===================");
+        System.out.println("\n=========Cift Sayilar==========");
         rakamlar.stream().filter(t-> t%2==0).forEach(Stream01Integer::yazdir);
-        System.out.println("===================");
+        System.out.println(" ");
+        System.out.println("\n==========Tek Sayilar=========");
         rakamlar.stream().filter(Stream01Integer::tekMi).forEach(Stream01Integer::yazdir);
     }
     public static void yazdir(int x){
