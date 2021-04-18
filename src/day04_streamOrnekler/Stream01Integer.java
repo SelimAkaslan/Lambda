@@ -33,20 +33,25 @@ public class Stream01Integer {
     }
 
     public static int buyukBul(List<Integer> liste){
+
         return liste.stream().reduce(0, (x,y)-> x >y ? x:y);
     }
 
     public static int buyukBul1(List<Integer> liste){
+
         return liste.stream().reduce(0,Math::max);
     }
 
     public static int buyukBul2(List<Integer> liste){
+
         return liste.stream().sorted().reduce(0,(x,y)->y);
     }
     public static int kucukBul(List<Integer> liste){
+
         return liste.stream().reduce(0,(x,y)-> x < y ? x:y);
     }
     public static int carpimBul(List<Integer> liste){
+
         return liste.stream().reduce(1,(x,y)-> x*y);
     }
 

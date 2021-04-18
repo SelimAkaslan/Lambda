@@ -16,42 +16,52 @@ public class Ogrenci {
     }
 
     public String getAd() {
+
         return ad;
     }
 
     public void setAd(String ad) {
+
         this.ad = ad;
     }
 
     public String getSoyAd() {
+
         return soyAd;
     }
 
     public void setSoyAd(String soyAd) {
+
         this.soyAd = soyAd;
     }
 
     public int getYas() {
+
         return yas;
     }
 
     public void setYas(int yas) {
+
         this.yas = yas;
     }
 
     public double getDiplomaNotu() {
+
         return diplomaNotu;
     }
 
     public void setDiplomaNotu(double diplomaNotu) {
+
         this.diplomaNotu = diplomaNotu;
     }
 
     public String getCinsiyet() {
+
         return cinsiyet;
     }
 
     public void setCinsiyet(String cinsiyet) {
+
         this.cinsiyet = cinsiyet;
     }
 
@@ -62,7 +72,6 @@ public class Ogrenci {
                 ", yaş=" + yas +
                 ", diploma Notu=" + diplomaNotu +
                 ", cinsiyet='" + cinsiyet + '\'';
+
     }
-
-
 }

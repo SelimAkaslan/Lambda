@@ -47,13 +47,16 @@ public class Stream02Digerleri {
     // ÖRNEK27: Berlirtilen sayının faktoriyelini hesaplayan metodunu tanımlayınız.
     //****************************************************************************************************
     public static int faktoriyel (int n){
-       return IntStream.rangeClosed(1,n).reduce(1,(x,y)->x*y);
+
+        return IntStream.rangeClosed(1,n).reduce(1,(x,y)->x*y);
         }
 
     public static Long faktorLong (int n){
+
         return LongStream.rangeClosed(1,n).reduce(1,(x, y)->x*y);
     }
     public static double faktorDouble (int n){
+
         return DoubleStream.iterate(1,t->t+1).limit(n).reduce(1,(x,y)->x*y);
     }
     //*********************************************************************************************

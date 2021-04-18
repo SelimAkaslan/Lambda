@@ -38,15 +38,19 @@ public class Lambda04 {
             this.yaş = yaş;
         }
         public String getIsim() {
+
             return isim;
         }
         public void setIsim(String isim) {
+
             this.isim = isim;
         }
         public int getYaş() {
+
             return yaş;
         }
         public void setYaş(int yaş) {
+
             this.yaş = yaş;
         }
     }

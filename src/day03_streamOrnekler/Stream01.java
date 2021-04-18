@@ -26,6 +26,7 @@ public class Stream01 {
         liste.stream().filter(Stream01::ciftMi).forEach(System.out::print);
     }
     public static boolean ciftMi(int x){
+
         return x%2==0;
     }
 }
