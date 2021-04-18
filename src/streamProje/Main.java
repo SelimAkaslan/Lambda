@@ -30,13 +30,11 @@ public class Main {
         notOrtalamasiSiraliListe();
         System.out.println("======Yasa ve Cinsiyete Gore Liste ======");
         yasVeCinsiyeteGoreListe(20,"kadin");
-        System.out.println("=====Notlari Elli altinda olanlarin Siralanmis Listesi=======");
-        notlariEllialtindaOlanlar();
+        System.out.println("=====Notlari Elli altinda olan erkeklerin Listesi=======");
+        notlariEllialtindaOlanErkeklistesi(50,"erkek");
 
 
     }
-
-
     private static void testOgrenciOlustur() {
         ogrListesi.add(new Ogrenci("Ahmet", "Can", 30, 95.5, "erkek"));
         ogrListesi.add(new Ogrenci("Ahmet", "Baki", 18, 90.1, "erkek"));
@@ -45,6 +43,9 @@ public class Main {
         ogrListesi.add(new Ogrenci("Ayse", "Yılmaz", 40, 45, "kadin"));
         ogrListesi.add(new Ogrenci("Ali", "Veli", 80, 35.5, "erkek"));
         ogrListesi.add(new Ogrenci("Veli", "Oztürk", 20, 95.5, "erkek"));
+        ogrListesi.add(new Ogrenci("Arif", "Kapi", 25, 55.5, "erkek"));
+        ogrListesi.add(new Ogrenci("Gul", "Türker", 18, 80.7, "kadin"));
+        ogrListesi.add(new Ogrenci("Mustafa", "Koca", 35, 45.8, "erkek"));
     }
 
     private static void ismeGoreListele(String isim){
@@ -81,11 +82,14 @@ public class Main {
 
     }
     private static void yasVeCinsiyeteGoreListe(int i, String cins){
-        ogrListesi.stream().filter(t-> t.getYas()>20 && t.getCinsiyet().equals("kadin")).forEach(System.out::println);
+        ogrListesi.stream().filter(t-> t.getYas()>20 && t.getCinsiyet().equals(cins)).
+                forEach(System.out::println);
 
     }
-    private static void notlariEllialtindaOlanlar(){
-        ogrListesi.stream().filter(t-> t.getDiplomaNotu()<50).forEach(System.out::println);
+    private static void notlariEllialtindaOlanErkeklistesi(int not, String cins){
+        ogrListesi.stream().
+                filter(t-> t.getDiplomaNotu()<not && t.getCinsiyet().equals(cins)).
+                forEach(System.out::println);
     }
 
 
