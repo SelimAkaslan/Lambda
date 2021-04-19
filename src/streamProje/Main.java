@@ -53,7 +53,6 @@ public class Main {
                 filter(t->t.getAd().equalsIgnoreCase(isim)).
                 forEach(System.out::println);
     }
-
     private static void cinsiyeteGoreListele(String cins){
         ogrListesi.stream().
                 filter(t-> t.getCinsiyet().equalsIgnoreCase(cins)).
